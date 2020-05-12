@@ -1,0 +1,18 @@
+<div >
+
+<h1 style="color: chartreuse; background-color: darkorange;">결과!!~!!</h1>
+
+<h2>당신이 입력한 문장의 길이는 총{{total}}입니다!~!!~</h2>
+
+<h3>당신이 입력한 문장</h3>
+{{text}}
+<br>
+
+<h3>단어 카운트</h3>
+{% for word,count in dictionary%}
+
+{{word}}:{{count}}
+<br>
+
+{% endfor %}
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wordcount!</title>
+    <link href="home.css" rel="stylesheet">
+   
+</head>
+
+<body style="width: 100%; height: 100%; margin: 0;">
+<div style="width: 100%; height: 100%; margin: 0; text-align: center; background-color: darkorange;">
+    <div style="padding: 20px;">
+    <h1 style=" color: darkorchid; background-color: chartreuse; font-size: 50px;">wordcount!</h1>
+    </div>
+
+<a href="{%url 'about' %}" style="font-size: 30px;">about</a>
+<br><br><br>
+<form action="{%url 'result'%}" method="">
+<textarea name="fulltext" id="" cols="50" rows="30" placeholder="적으세용"></textarea>
+<br><br>
+<button style="background-color: darkorchid; padding: 20px 50px 20px 50px; font-size: 25px;" type="submit">count!!</button>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</form>
+</div>
+</body>
+</html>
