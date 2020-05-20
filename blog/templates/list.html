@@ -1,17 +1,23 @@
-<h1>Blog Project</h1>
+<body style="margin:30px; text-align: center; 
+background-color:rgb(214, 208, 191) ">
+<h1>Film Blog</h1>
 
-<a href="{%url 'new' %}">새글 작성하기</a>
+<a href="{%url 'new' %}">New post</a>
 {% for blog in blogs%}
 
 <hr>
-<a href="{%url 'detail' blog.id %}">
-{{blog.title}}
+<a href="{%url 'detail' blog.id%}">
+<h2 style="color:rgb(81, 109, 93);">{{blog.title}}</h2>
 <br>
 {{blog.pub_date}}
 <br>
 {{blog.summary}}
+<br><br>
+<img src="{{blog.image.url}}" height="500px" >
 <br>
 </a>
 
 
+
 {% endfor %}
+</body>
