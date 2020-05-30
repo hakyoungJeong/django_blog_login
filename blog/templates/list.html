@@ -3,8 +3,19 @@ background-color:rgb(214, 208, 191) ">
 <h1>Film Blog</h1>
 
 <a href="{%url 'new' %}">New post</a>
-{% for blog in blogs%}
 
+<div>
+    {% if user.is_authenticated %}
+        <h3>안녕하세요 {{user.username}}님</h3>
+    {% endif %}
+    <a href="{% url 'login'%}">login</a>
+    <a href="{% url 'logout'%}">logout</a>
+    
+</div>
+
+
+
+{% for blog in blogs%}
 <hr>
 <a href="{%url 'detail' blog.id%}">
 <h2 style="color:rgb(81, 109, 93);">{{blog.title}}</h2>
@@ -16,8 +27,6 @@ background-color:rgb(214, 208, 191) ">
 <img src="{{blog.image.url}}" height="500px" >
 <br>
 </a>
-
-
 
 {% endfor %}
 </body>
